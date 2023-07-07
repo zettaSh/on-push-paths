@@ -1,0 +1,12 @@
+name: test
+on:
+  push:
+    tags-ignore:
+      - '**'
+    paths:
+      - 'trigger.txt'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo helloworld
